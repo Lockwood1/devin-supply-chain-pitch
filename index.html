@@ -157,6 +157,26 @@
     .qa .a { color: var(--muted); font-size: 15px; max-width: 680px; }
     .qa .a strong { color: var(--ink); font-weight: 600; }
 
+    /* Stat strip (published proof) */
+    .stat-strip { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+    .stat {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 22px 24px;
+    }
+    .stat .n {
+      font-size: 40px; font-weight: 800; letter-spacing: -0.03em;
+      color: var(--accent); line-height: 1;
+    }
+    .stat .d { font-size: 13.5px; color: var(--muted); margin-top: 8px; }
+    .stat-src { margin-top: 14px; font-size: 13.5px; color: var(--muted); }
+    .stat-src a { color: var(--accent); font-weight: 600; text-decoration: none; }
+    .stat-src a:hover { text-decoration: underline; }
+
+    /* Inline CTA line */
+    .cta-line { margin-top: 26px; font-size: 16.5px; font-weight: 600; }
+    .cta-line a { color: var(--accent); text-decoration: none; border-bottom: 2px solid var(--accent-soft); }
+    .cta-line a:hover { border-bottom-color: var(--accent); }
+
     /* Pilot */
     .pilot-box {
       background: var(--accent-soft); border: 1px solid #cfe0f2;
@@ -217,6 +237,7 @@
         <a href="#fear-1">Two fears</a>
         <a href="#twice">Pays off twice</a>
         <a href="#pilot">Pilot</a>
+        <a href="#slip">Go-lives</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -410,6 +431,44 @@
       </div>
     </section>
 
+    <!-- ======= 7b. WHERE GO-LIVES SLIP ======= -->
+    <section id="slip">
+      <h2>Go-live risk</h2>
+      <h3 class="section-title">Where go-lives actually slip.</h3>
+      <div class="cards">
+        <div class="card">
+          <span class="lbl">The problem</span>
+          <p>When you replace or upgrade a WMS or ERP, the new platform is rarely what causes delays. The delays come from the years of custom code connected to it: EDI maps, API connections to the TMS and carriers, custom reports, and data-transfer jobs. Rewriting and testing that code by hand typically takes consultants months.</p>
+        </div>
+        <div class="card">
+          <span class="lbl">How Devin helps</span>
+          <p>Devin rewrites custom integrations for the new system, updates field mappings, writes tests, and handles hundreds of small, repetitive changes in parallel. Your engineers review and approve the work instead of doing it themselves, so projects finish faster and stay closer to budget.</p>
+        </div>
+        <div class="card">
+          <span class="lbl">The rollout</span>
+          <p>You don't figure it out alone. Cognition's forward-deployed engineers work alongside your team to roll Devin out.</p>
+        </div>
+      </div>
+      <div class="stat-strip">
+        <div class="stat">
+          <div class="n">~8&times;</div>
+          <div class="d">reported engineering-time efficiency on migration work</div>
+        </div>
+        <div class="stat">
+          <div class="n">20&times;</div>
+          <div class="d">reported cost savings on the migration scope delegated to Devin</div>
+        </div>
+      </div>
+      <p class="stat-src">
+        Reported by Nubank after migrating a multi-million-line ETL system.
+        <a href="https://devin.ai/customers/nubank" target="_blank" rel="noopener">Read Cognition's published customer story &rarr;</a>
+      </p>
+      <p class="cta-line">
+        Have a WMS or ERP project on the roadmap?
+        <a href="https://cal.com/carson-lockwood-9knz2p" target="_blank" rel="noopener">Let's talk about where Devin fits.</a>
+      </p>
+    </section>
+
     <!-- ======= 8. CLOSING ======= -->
     <section id="contact" class="closing">
       <h2>Why I built this</h2>
@@ -439,7 +498,7 @@
   <footer>
     <div class="container">
       <p>A sample sales pitch built by Carson Lockwood. Devin is a product of Cognition.</p>
-      <p>The buyer scenario is illustrative. No real companies, customers, or software products are named in it.</p>
+      <p>The buyer scenario is illustrative. The only named customer, Nubank, is cited from Cognition's published customer story.</p>
     </div>
   </footer>
 
