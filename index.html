@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Two migrations. One engineering risk. — Devin for supply chain transformation</title>
-  <meta name="description" content="A pitch for Devin: the AI software engineer that takes on the integration, data, legacy code, and testing work that decides whether back-to-back WMS and ERP migrations land on time.">
-  <meta property="og:title" content="Two migrations. One engineering risk.">
-  <meta property="og:description" content="How Devin de-risks back-to-back WMS and ERP migrations for a large manufacturer with a multi-site distribution network.">
+  <title>Two fears behind every warehouse migration. Devin addresses both.</title>
+  <meta name="description" content="A pitch for Devin: the AI software engineer that documents what a legacy WMS quietly did and tests that the new system does what leadership asked. Written for IT and supply chain leaders running back-to-back WMS and ERP migrations.">
+  <meta property="og:title" content="Two fears behind every warehouse migration. Devin addresses both.">
+  <meta property="og:description" content="Devin documents the legacy system and tests the new one, and the work carries into your ERP replacement.">
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f4e8c'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='700' fill='white' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,6 +71,7 @@
       color: var(--muted); max-width: 640px;
     }
     .hero .sub strong { color: var(--ink); font-weight: 600; }
+    .hero .contact-links { margin-top: 30px; }
 
     /* Migration flow diagram */
     .flow {
@@ -94,10 +95,6 @@
       color: var(--accent); font-size: 20px; font-weight: 700;
       flex: 0 0 auto;
     }
-    .flow-note {
-      margin-top: 14px; font-size: 13.5px; color: var(--muted);
-    }
-    .flow-note em { color: var(--accent); font-style: normal; font-weight: 600; }
 
     /* ---------- Sections ---------- */
     section { padding: 46px 0; }
@@ -112,14 +109,13 @@
     }
     .section-title {
       font-size: clamp(22px, 4vw, 28px); font-weight: 800;
-      letter-spacing: -0.02em; margin: 14px 0 12px; text-transform: none;
-      color: var(--ink); letter-spacing: -0.02em;
+      letter-spacing: -0.02em; margin: 14px 0 22px;
+      color: var(--ink);
     }
-    h3.section-title::after { content: none; }
     .lede { color: var(--muted); font-size: 16.5px; max-width: 660px; margin-bottom: 30px; }
     .lede strong { color: var(--ink); font-weight: 600; }
 
-    /* Pain cards */
+    /* Cards */
     .cards { display: grid; gap: 14px; }
     .card {
       background: var(--card); border: 1px solid var(--line);
@@ -130,56 +126,26 @@
       margin-bottom: 6px;
     }
     .card p { color: var(--muted); font-size: 15px; }
-    .num {
-      display: inline-block; color: var(--accent); font-weight: 800;
-      font-size: 13px; margin-right: 8px;
+    .lbl {
+      display: block; font-size: 11.5px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 8px;
     }
-
-    /* Pain -> Devin mapping */
-    .map-row {
-      display: grid; grid-template-columns: 1fr 28px 1.4fr;
-      gap: 0 14px; align-items: center;
-      padding: 18px 0; border-bottom: 1px solid var(--line);
-    }
-    .map-row:last-child { border-bottom: none; }
-    .map-pain { font-size: 14px; font-weight: 600; color: var(--muted); }
-    .map-arrow { color: var(--accent); font-size: 17px; font-weight: 700; text-align: center; }
-    .map-task { font-size: 15px; }
-    .map-task strong { font-weight: 600; }
 
     /* Reuse list */
     .reuse { display: grid; gap: 14px; }
     .reuse .card { border-left: 3px solid var(--accent); }
 
-    /* Outcomes */
-    .outcomes { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .outcome {
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 22px 24px;
+    /* Compact secondary list */
+    .slim-list { list-style: none; display: grid; gap: 10px; }
+    .slim-list li {
+      position: relative; padding-left: 24px;
+      color: var(--muted); font-size: 15px;
     }
-    .outcome h4 { font-size: 15.5px; font-weight: 700; margin-bottom: 6px; }
-    .outcome p { color: var(--muted); font-size: 14.5px; }
-    .honest-note {
-      margin-top: 18px; font-size: 13.5px; color: var(--muted);
-      border-left: 3px solid var(--line); padding-left: 14px;
+    .slim-list li::before {
+      content: "\2192"; position: absolute; left: 0;
+      color: var(--accent); font-weight: 700;
     }
-
-    /* Proof / case study */
-    .proof-card {
-      background: var(--card); border: 1px solid var(--line);
-      border-radius: var(--radius); padding: 28px;
-      display: grid; grid-template-columns: 150px 1fr; gap: 26px;
-      align-items: start;
-    }
-    .proof-stat {
-      font-size: 52px; font-weight: 800; letter-spacing: -0.03em;
-      color: var(--accent); line-height: 1;
-    }
-    .proof-stat-label { font-size: 13px; color: var(--muted); margin-top: 8px; }
-    .proof-body p { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
-    .proof-body p strong { color: var(--ink); font-weight: 600; }
-    .proof-link { font-size: 14px; font-weight: 600; color: var(--accent); text-decoration: none; }
-    .proof-link:hover { text-decoration: underline; }
 
     /* FAQ */
     .qa { border-bottom: 1px solid var(--line); padding: 22px 0; }
@@ -237,13 +203,8 @@
       .nav-links a { font-size: 13px; }
       .flow .arrow { transform: rotate(90deg); padding: 6px 0; width: 100%; text-align: center; }
       .flow .stage { flex: 1 1 100%; }
-      .map-row { grid-template-columns: 1fr; gap: 4px; padding: 16px 0; }
-      .map-arrow { display: none; }
-      .map-pain { font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.06em; }
-      .outcomes { grid-template-columns: 1fr; }
-      .card, .outcome { padding: 20px; }
+      .card { padding: 20px; }
       .contact-links .btn { width: 100%; justify-content: center; }
-      .proof-card { grid-template-columns: 1fr; gap: 16px; }
     }
   </style>
 </head>
@@ -253,8 +214,8 @@
     <div class="container">
       <span class="nav-name">Devin <span>·</span> migration engineering</span>
       <div class="nav-links">
-        <a href="#work">The work</a>
-        <a href="#devin">What Devin does</a>
+        <a href="#fear-1">Two fears</a>
+        <a href="#twice">Pays off twice</a>
         <a href="#pilot">Pilot</a>
         <a href="#contact">Contact</a>
       </div>
@@ -266,234 +227,155 @@
     <!-- ======= 1. HERO ======= -->
     <header class="hero">
       <span class="eyebrow">For a large manufacturer with a multi-site distribution network</span>
-      <h1>Two migrations. One engineering risk.</h1>
+      <h1>Two fears behind every warehouse migration. Devin addresses both.</h1>
       <p class="sub">
-        A legacy, heavily customized warehouse management system is moving to a modern
-        cloud WMS. A planned ERP replacement comes next. The software decisions are made —
-        <strong>the code-level work around them is where the risk sits.</strong>
-        That's the work Devin does.
+        Losing what the old system quietly did, and not being able to prove the
+        new one does what leadership asked. Devin documents the first and tests
+        the second, and the work carries into your ERP replacement.
       </p>
+      <div class="contact-links">
+        <a class="btn primary" href="https://cal.com/carson-lockwood-9knz2p" target="_blank" rel="noopener">Book a conversation</a>
+      </div>
 
       <div class="flow" aria-label="Transformation timeline">
         <div class="stage">
           <div class="k">Today</div>
-          <div class="v">Legacy, heavily customized WMS</div>
+          <div class="v">A legacy, heavily customized WMS</div>
         </div>
         <div class="arrow" aria-hidden="true">&rarr;</div>
         <div class="stage">
           <div class="k">In flight</div>
-          <div class="v">Modern cloud WMS migration</div>
+          <div class="v">Migration to a modern cloud WMS</div>
         </div>
         <div class="arrow" aria-hidden="true">&rarr;</div>
         <div class="stage">
           <div class="k">Next</div>
-          <div class="v">Planned ERP replacement</div>
+          <div class="v">A planned ERP replacement</div>
         </div>
       </div>
-      <p class="flow-note">
-        Two back-to-back transformations — <em>both standing on the same tangle of integrations.</em>
-      </p>
     </header>
 
-    <!-- ======= 2. THE WORK NOBODY BUDGETS FOR ======= -->
-    <section id="work">
-      <h2>The work nobody budgets for</h2>
-      <p class="lede">
-        Configuring the WMS is the system integrator's job, and they're good at it.
-        But a warehouse transformation lives or dies on engineering work that sits
-        <strong>between</strong> systems — work that rarely has a named owner or a
-        real line in the budget.
-      </p>
+    <!-- ======= 2. FEAR 1 ======= -->
+    <section id="fear-1">
+      <h2>Fear one</h2>
+      <h3 class="section-title">Nothing vital gets lost.</h3>
       <div class="cards">
         <div class="card">
-          <h4><span class="num">01</span>Integrations</h4>
-          <p>ERP, carriers, 3PLs, EDI partners. Every interface into the old WMS has to be rebuilt, remapped, and retested — across every site in the network.</p>
+          <span class="lbl">The problem</span>
+          <p>Years of customizations, reports, and business rules that nobody wrote down. Some still do something important. Nobody is sure which, and the people who built them have often moved on.</p>
         </div>
         <div class="card">
-          <h4><span class="num">02</span>Data migration &amp; cleansing</h4>
-          <p>Item masters, locations, inventory balances, customer and vendor records. Bad data doesn't fail in the project plan. It fails on cutover weekend.</p>
+          <span class="lbl">What Devin does</span>
+          <p>Reads the legacy custom code and documents every business rule, report, and integration touchpoint before anything is decommissioned. Produces an inventory your team reviews and signs off on.</p>
         </div>
         <div class="card">
-          <h4><span class="num">03</span>Undocumented legacy code</h4>
-          <p>Years of customizations, bolt-ons, and reports nobody wrote down. Some of them still do something important. Nobody is sure which.</p>
-        </div>
-        <div class="card">
-          <h4><span class="num">04</span>Regression testing</h4>
-          <p>Every mock cutover and every go-live needs the same flows verified end to end. This is the work that quietly slips when the timeline tightens.</p>
-        </div>
-        <div class="card">
-          <h4><span class="num">05</span>The post-go-live backlog</h4>
-          <p>The ticket queue lands on the same engineers who just ran the migration — while the ERP program is already staffing up behind them.</p>
+          <span class="lbl">What you get</span>
+          <p>A reviewed record of what the old system actually does, so decisions about what to keep, rebuild, or retire are made on purpose.</p>
         </div>
       </div>
     </section>
 
-    <!-- ======= 3. WHAT DEVIN DOES ======= -->
-    <section id="devin">
-      <h2>What Devin does</h2>
-      <p class="lede">
-        Devin is an AI software engineer. It works in its own environment, writes and
-        tests real code, and delivers work as pull requests your engineers review and
-        approve. Scoped to this program, that means:
-      </p>
-
-      <div class="map-row">
-        <div class="map-pain">Undocumented legacy code</div>
-        <div class="map-arrow" aria-hidden="true">&rarr;</div>
-        <div class="map-task"><strong>Maps and documents legacy custom code before it's decommissioned</strong> — including the modifications and reports nobody wrote down.</div>
-      </div>
-      <div class="map-row">
-        <div class="map-pain">Integrations</div>
-        <div class="map-arrow" aria-hidden="true">&rarr;</div>
-        <div class="map-task"><strong>Writes and tests integration code</strong> — file maps, transforms, error handling — for ERP, carrier, 3PL, and EDI connections.</div>
-      </div>
-      <div class="map-row">
-        <div class="map-pain">Data migration &amp; cleansing</div>
-        <div class="map-arrow" aria-hidden="true">&rarr;</div>
-        <div class="map-task"><strong>Builds data validation and cleansing scripts</strong> — extraction, transformation, reconciliation, and field-level mismatch reports.</div>
-      </div>
-      <div class="map-row">
-        <div class="map-pain">Regression testing</div>
-        <div class="map-arrow" aria-hidden="true">&rarr;</div>
-        <div class="map-task"><strong>Builds and maintains regression suites</strong> that rerun before every mock cutover — so test coverage doesn't depend on calendar pressure.</div>
-      </div>
-      <div class="map-row">
-        <div class="map-pain">Post-go-live backlog</div>
-        <div class="map-arrow" aria-hidden="true">&rarr;</div>
-        <div class="map-task"><strong>Works the ticket queue</strong> — triages, reproduces, fixes, opens PRs — while your senior engineers move to the ERP program.</div>
+    <!-- ======= 3. FEAR 2 ======= -->
+    <section id="fear-2">
+      <h2>Fear two</h2>
+      <h3 class="section-title">Prove the new system does what leadership asked.</h3>
+      <div class="cards">
+        <div class="card">
+          <span class="lbl">The problem</span>
+          <p>Leadership has requirements for the new system. Every mock cutover and go-live needs the same warehouse flows proven end to end: receiving, putaway, replenishment, pick, pack, ship. Manual testing is what slips when the timeline tightens. <strong>Bad data doesn't fail in the project plan. It fails on cutover weekend.</strong></p>
+        </div>
+        <div class="card">
+          <span class="lbl">What Devin does</span>
+          <p>Turns leadership's requirements and the documented legacy behavior into automated tests that run before every mock cutover and go-live, so the last site is tested as thoroughly as the first.</p>
+        </div>
+        <div class="card">
+          <span class="lbl">What you get</span>
+          <p>Evidence, not assurances, that the new system matches what was asked for before orders move through it.</p>
+        </div>
       </div>
     </section>
 
-    <!-- ======= 4. ONE INVESTMENT, TWO MIGRATIONS ======= -->
-    <section id="reuse">
-      <h2>One investment, two migrations</h2>
+    <!-- ======= 4. WHY IT PAYS OFF TWICE ======= -->
+    <section id="twice">
+      <h2>Why it pays off twice</h2>
       <p class="lede">
-        The ERP replacement inherits whatever the WMS project leaves behind.
-        With Devin in the code, most of it becomes an asset instead of a liability.
+        The ERP replacement depends on the same integrations and the same
+        warehouse flows. What Devin builds for the WMS migration becomes the
+        starting point for the next project.
       </p>
       <div class="reuse">
         <div class="card">
-          <h4>Documentation becomes the spec</h4>
-          <p>What Devin writes down about how the legacy system actually behaves becomes the requirements document for ERP integrations — not a wiki page that goes stale, but reviewed, merged documentation.</p>
+          <h4>Documentation becomes the requirements</h4>
+          <p>The reviewed record of what the old system did becomes the starting point for ERP integrations.</p>
         </div>
         <div class="card">
-          <h4>Integration code carries forward</h4>
-          <p>Carrier, 3PL, and EDI interfaces don't disappear with the old WMS. They get repointed at the new ERP — remapped, not rebuilt from scratch.</p>
+          <h4>Tests get rerun, not rebuilt</h4>
+          <p>The same suites run again after the ERP switch to prove the warehouse still works.</p>
         </div>
         <div class="card">
-          <h4>Test suites get rerun, not rebuilt</h4>
-          <p>The regression suite that protects the WMS cutover protects the ERP cutover. Same network, same flows, same proof before go-live.</p>
-        </div>
-        <div class="card">
-          <h4>Knowledge doesn't walk out the door</h4>
-          <p>System knowledge ends up in code and documentation your team owns — not in people's heads that leave when the project ends.</p>
+          <h4>Knowledge stays with your team</h4>
+          <p>It lives in documentation and code your team owns, not in people's heads that leave when the project ends.</p>
         </div>
       </div>
     </section>
 
-    <!-- ======= 5. OUTCOMES ======= -->
-    <section id="outcomes">
-      <h2>What it buys, in warehouse terms</h2>
-      <p class="lede">
-        Not abstract productivity. The outcomes a VP of IT or supply chain leader
-        is actually measured on.
-      </p>
-      <div class="outcomes">
-        <div class="outcome">
-          <h4>Protect the go-live date</h4>
-          <p>Cutover risk lives in untested interfaces and dirty data. Surface it in mock cutovers — not on the floor, not on a Monday morning.</p>
-        </div>
-        <div class="outcome">
-          <h4>No shipping disruption</h4>
-          <p>Carrier, EDI, and 3PL flows verified before the first real order moves through the new system.</p>
-        </div>
-        <div class="outcome">
-          <h4>Fewer integrator change orders</h4>
-          <p>The SI's scope stays where it belongs — configuration and process. Code-level work stops arriving as time-and-materials surprises.</p>
-        </div>
-        <div class="outcome">
-          <h4>Internal IT capacity back</h4>
-          <p>Your engineers review pull requests instead of writing every script and chasing every ticket — and stay free for the ERP program.</p>
-        </div>
-      </div>
-      <p class="honest-note">
-        No invented percentages here. The honest version is directional: this is the
-        work where migrations bleed time and money, and it's the work Devin does.
-      </p>
-    </section>
-
-    <!-- ======= 5b. PUBLISHED PROOF ======= -->
-    <section id="proof">
-      <h2>Published proof</h2>
-      <p class="lede">
-        This isn't a theoretical argument. Cognition has published it — with the
-        customer's name on it.
-      </p>
-      <div class="proof-card">
-        <div>
-          <div class="proof-stat">8&ndash;12&times;</div>
-          <div class="proof-stat-label">
-            engineering-hours efficiency on migration tasks — measured as the
-            typical engineering hours to complete a migration task, compared with
-            the total engineering hours spent prompting and reviewing Devin's
-            work on the same task
-          </div>
-        </div>
-        <div class="proof-body">
-          <p>
-            <strong>Nubank</strong> needed to split its core ETL — an 8-year-old
-            monolith of over 6 million lines of code — into smaller sub-modules.
-            Engineers delegated the repetitive migration work to Devin and
-            reviewed its output.
-          </p>
-          <p>
-            Different industry, same shape of problem: a years-old system,
-            millions of lines nobody wants to touch, and a migration that can't
-            stop the business.
-          </p>
-          <a class="proof-link" href="https://devin.ai/customers/nubank" target="_blank" rel="noopener">Read the published story &rarr;</a>
-        </div>
-      </div>
+    <!-- ======= 5. WHERE ELSE DEVIN HELPS ======= -->
+    <section id="elsewhere">
+      <h2>Where else Devin helps</h2>
+      <p class="lede">Secondary to the two fears, but on the same ticket queue.</p>
+      <ul class="slim-list">
+        <li>Writing and testing integration code, where your interfaces are built in code</li>
+        <li>Data validation and reconciliation scripts for item, location, and inventory loads</li>
+        <li>Working through code-level tickets after go-live</li>
+      </ul>
     </section>
 
     <!-- ======= 6. STRAIGHT ANSWERS ======= -->
     <section id="answers">
       <h2>Straight answers</h2>
-      <p class="lede">The objections I'd expect — answered directly.</p>
+      <h3 class="section-title">What you're probably thinking.</h3>
 
       <div class="qa">
-        <div class="q">&ldquo;Devin doesn't replace our integrator.&rdquo;</div>
+        <div class="q">&ldquo;We're mid-migration. We can't add anything right now.&rdquo;</div>
         <div class="a">
-          <strong>Correct — and it shouldn't.</strong> The integrator owns business process
-          design and WMS configuration. Devin works alongside them on the code-level
-          engineering around it: the integrations, data scripts, and tests that otherwise
-          show up as change orders.
+          That's the reason to keep it small. The pilot runs alongside the program
+          on one area, takes a few hours a week of an engineer's review time, and
+          never touches the cutover schedule. If it doesn't help, you stop.
+        </div>
+      </div>
+      <div class="qa">
+        <div class="q">&ldquo;My team doesn't have time to manage another tool.&rdquo;</div>
+        <div class="a">
+          Devin doesn't need a project of its own. Your engineers assign work the
+          way they'd assign a ticket and review what comes back as pull requests.
+          Review takes less time than doing the work.
+        </div>
+      </div>
+      <div class="qa">
+        <div class="q">&ldquo;Our integrator already covers testing and documentation.&rdquo;</div>
+        <div class="a">
+          Check the statement of work. Integrators usually test their configuration,
+          not the custom code, reports, and interfaces your team built over the
+          years. If they do cover it, Devin can extend their coverage; if they
+          don't, it fills the gap without a change order.
+        </div>
+      </div>
+      <div class="qa">
+        <div class="q">&ldquo;How do I know the documentation is right? AI gets things wrong.&rdquo;</div>
+        <div class="a">
+          You shouldn't take it on faith. Every document and test comes back as a
+          pull request your engineers review against how the system actually
+          behaves. In the pilot, that review is the success criterion: if your
+          team can't sign off on it, the work doesn't count.
         </div>
       </div>
       <div class="qa">
         <div class="q">&ldquo;We can't give an AI access to our systems.&rdquo;</div>
         <div class="a">
-          <strong>You don't hand over the keys.</strong> Every change arrives as a pull
-          request your engineers review and approve before anything merges. Access can be
-          scoped — Cognition supports RBAC, SSO, and fine-grained access controls, doesn't
-          train on enterprise customer data, and publishes SOC 2 and ISO 27001 on its
-          public security page, with a Trust Center for the details.
-        </div>
-      </div>
-      <div class="qa">
-        <div class="q">&ldquo;Our code is too old — or too custom.&rdquo;</div>
-        <div class="a">
-          <strong>That's the case for it, not against it.</strong> Undocumented legacy code
-          is exactly where automated code understanding pays back first — and it's where
-          the risk of losing knowledge to retirement and attrition quietly sits.
-          (Nubank's migration started from an 8-year-old, 6-million-line monolith.)
-        </div>
-      </div>
-      <div class="qa">
-        <div class="q">What Devin does not do</div>
-        <div class="a">
-          It doesn't click through vendor setup screens, and it doesn't own business
-          process design. Those stay with the integrator and your team — where they belong.
+          Every change comes back as a pull request your engineers review and
+          approve before anything merges. Cognition is SOC 2 Type II certified.
+          By default, Cognition does not train its models on customer data or
+          code. It publishes a Trust Center with the details.
         </div>
       </div>
     </section>
@@ -502,27 +384,27 @@
     <section id="pilot">
       <h2>A bounded way to start</h2>
       <p class="lede">
-        Not a platform decision. One integration, one engineer overseeing,
-        a few weeks, clear exit criteria.
+        Not a platform decision. One area, one engineer reviewing, a few weeks,
+        clear exit criteria.
       </p>
       <div class="pilot-box">
-        <h4>Pilot: document and test one integration</h4>
+        <h4>Pilot: document one area, test one flow</h4>
         <dl>
           <div>
             <dt>Scope</dt>
-            <dd>One bounded interface — for example, the WMS&ndash;ERP inventory sync, or a single carrier / EDI connection. Document how it actually behaves today, map the fields, write the validation tests.</dd>
+            <dd>One bounded area. For example, one legacy module or a single integration. Devin documents how it actually behaves and writes the tests that prove the new system handles it.</dd>
           </div>
           <div>
             <dt>Duration</dt>
-            <dd>Roughly four weeks, running alongside the program — never in its way.</dd>
+            <dd>Roughly four weeks, running alongside the program. Never in its way. A few hours a week of an engineer's review time.</dd>
           </div>
           <div>
             <dt>Success criteria</dt>
-            <dd>Complete documentation of the interface as it really behaves. A repeatable validation suite your team can run before every mock cutover. Your engineers' sign-off on every pull request.</dd>
+            <dd>Documentation and tests your engineers sign off on, plus a test suite that runs before the next mock cutover.</dd>
           </div>
           <div>
             <dt>Exit criteria</dt>
-            <dd>If it doesn't produce docs and tests your engineers would sign, don't expand. If it does, the same pattern scales to the rest of the integration list — and into the ERP program.</dd>
+            <dd>If your team can't sign off on the work, don't expand. If they can, the same pattern scales to the rest of the program and into the ERP replacement.</dd>
           </div>
         </dl>
       </div>
@@ -534,14 +416,14 @@
       <p class="byline">Carson Lockwood</p>
       <p>
         I've spent six years in enterprise logistics account management, and I've
-        watched what a bad warehouse cutover does to an operation — missed shipments,
+        watched what a bad warehouse cutover does to an operation. Missed shipments,
         frozen inventory, customers calling. The software gets blamed. Usually,
         it isn't the software. <strong>It's the engineering work around it that nobody owned.</strong>
       </p>
       <p>
-        I built this page because Devin is built for exactly that gap — and
-        because this is the conversation I'd want to have: specific, bounded,
-        and honest about what the product doesn't do.
+        I built this page because Devin is built for exactly that gap, and because
+        this is the conversation I'd want to have: specific, bounded, and honest
+        about what the product doesn't do.
       </p>
       <p>
         If you're running a WMS migration with an ERP replacement behind it, let's talk.
@@ -557,7 +439,7 @@
   <footer>
     <div class="container">
       <p>A sample sales pitch built by Carson Lockwood. Devin is a product of Cognition.</p>
-      <p>The buyer scenario is illustrative — no real companies, customers, or software products are named in it. The Nubank example is Cognition's published customer story.</p>
+      <p>The buyer scenario is illustrative. No real companies, customers, or software products are named in it.</p>
     </div>
   </footer>
 
