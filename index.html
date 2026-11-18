@@ -164,6 +164,31 @@
       border-left: 3px solid var(--line); padding-left: 14px;
     }
 
+    /* Proof / case study */
+    .proof-card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: var(--radius); padding: 28px;
+      display: grid; grid-template-columns: 150px 1fr; gap: 26px;
+      align-items: start;
+    }
+    .proof-stat {
+      font-size: 52px; font-weight: 800; letter-spacing: -0.03em;
+      color: var(--accent); line-height: 1;
+    }
+    .proof-stat-label { font-size: 13px; color: var(--muted); margin-top: 8px; }
+    .proof-body p { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
+    .proof-body p strong { color: var(--ink); font-weight: 600; }
+    .proof-quote {
+      border-left: 3px solid var(--accent); padding-left: 14px;
+      font-size: 15px; font-weight: 500; margin: 14px 0;
+    }
+    .proof-quote .who {
+      display: block; font-size: 13px; color: var(--muted);
+      margin-top: 6px; font-weight: 400;
+    }
+    .proof-link { font-size: 14px; font-weight: 600; color: var(--accent); text-decoration: none; }
+    .proof-link:hover { text-decoration: underline; }
+
     /* FAQ */
     .qa { border-bottom: 1px solid var(--line); padding: 22px 0; }
     .qa:last-of-type { border-bottom: none; }
@@ -226,6 +251,7 @@
       .outcomes { grid-template-columns: 1fr; }
       .card, .outcome { padding: 20px; }
       .contact-links .btn { width: 100%; justify-content: center; }
+      .proof-card { grid-template-columns: 1fr; gap: 16px; }
     }
   </style>
 </head>
@@ -404,6 +430,42 @@
       </p>
     </section>
 
+    <!-- ======= 5b. PUBLISHED PROOF ======= -->
+    <section id="proof">
+      <h2>Published proof</h2>
+      <p class="lede">
+        This isn't a theoretical argument. Cognition has published it — with the
+        customer's name on it.
+      </p>
+      <div class="proof-card">
+        <div>
+          <div class="proof-stat">2&times;</div>
+          <div class="proof-stat-label">
+            user-story output from a previously constrained engineering team,
+            over three months
+          </div>
+        </div>
+        <div class="proof-body">
+          <p>
+            <strong>GE Aerospace</strong> builds software airlines rely on — flight
+            data monitoring, airspace efficiency, fuel insight — and customer demand
+            kept outgrowing engineering capacity. Their teams started with a small
+            group of engineers and concrete test cases, <strong>including legacy code
+            modernization</strong>, then expanded as Devin proved out.
+          </p>
+          <div class="proof-quote">
+            &ldquo;It's just such a force multiplier.&rdquo;
+            <span class="who">Nate Hicks, VP Product Management, GE Aerospace</span>
+          </div>
+          <p>
+            Engineers direct and review the work. Devin does more of it. That's the
+            same trade this program needs — and the same bounded way to start.
+          </p>
+          <a class="proof-link" href="https://devin.ai/customers/geaerospace" target="_blank" rel="noopener">Read the published story &rarr;</a>
+        </div>
+      </div>
+    </section>
+
     <!-- ======= 6. STRAIGHT ANSWERS ======= -->
     <section id="answers">
       <h2>Straight answers</h2>
@@ -434,6 +496,7 @@
           <strong>That's the case for it, not against it.</strong> Undocumented legacy code
           is exactly where automated code understanding pays back first — and it's where
           the risk of losing knowledge to retirement and attrition quietly sits.
+          (Legacy code modernization was one of GE Aerospace's first test cases.)
         </div>
       </div>
       <div class="qa">
@@ -450,7 +513,9 @@
       <h2>A bounded way to start</h2>
       <p class="lede">
         Not a platform decision. One integration, one engineer overseeing,
-        a few weeks, clear exit criteria.
+        a few weeks, clear exit criteria. It's also how Devin actually gets
+        adopted — GE Aerospace's rollout began with a small group of engineers
+        and concrete test cases, then expanded.
       </p>
       <div class="pilot-box">
         <h4>Pilot: document and test one integration</h4>
@@ -505,7 +570,7 @@
   <footer>
     <div class="container">
       <p>A sample sales pitch built by Carson Lockwood. Devin is a product of Cognition.</p>
-      <p>No real companies, customers, or software products are named on this page. The buyer described is illustrative.</p>
+      <p>The buyer scenario is illustrative — no real companies, customers, or software products are named in it. The GE Aerospace example is Cognition's published customer story.</p>
     </div>
   </footer>
 
