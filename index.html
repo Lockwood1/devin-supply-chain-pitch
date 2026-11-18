@@ -178,14 +178,6 @@
     .proof-stat-label { font-size: 13px; color: var(--muted); margin-top: 8px; }
     .proof-body p { color: var(--muted); font-size: 15px; margin-bottom: 12px; }
     .proof-body p strong { color: var(--ink); font-weight: 600; }
-    .proof-quote {
-      border-left: 3px solid var(--accent); padding-left: 14px;
-      font-size: 15px; font-weight: 500; margin: 14px 0;
-    }
-    .proof-quote .who {
-      display: block; font-size: 13px; color: var(--muted);
-      margin-top: 6px; font-weight: 400;
-    }
     .proof-link { font-size: 14px; font-weight: 600; color: var(--accent); text-decoration: none; }
     .proof-link:hover { text-decoration: underline; }
 
@@ -394,7 +386,7 @@
         </div>
         <div class="card">
           <h4>Knowledge doesn't walk out the door</h4>
-          <p>System knowledge ends up in code and documentation your team owns — not in an integrator's head that leaves when the contract ends.</p>
+          <p>System knowledge ends up in code and documentation your team owns — not in people's heads that leave when the project ends.</p>
         </div>
       </div>
     </section>
@@ -439,29 +431,27 @@
       </p>
       <div class="proof-card">
         <div>
-          <div class="proof-stat">2&times;</div>
+          <div class="proof-stat">8&ndash;12&times;</div>
           <div class="proof-stat-label">
-            user-story output from a previously constrained engineering team,
-            over three months
+            engineering-hours efficiency on migration tasks — measured as the
+            typical engineering hours to complete a migration task, compared with
+            the total engineering hours spent prompting and reviewing Devin's
+            work on the same task
           </div>
         </div>
         <div class="proof-body">
           <p>
-            <strong>GE Aerospace</strong> builds software airlines rely on — flight
-            data monitoring, airspace efficiency, fuel insight — and customer demand
-            kept outgrowing engineering capacity. Their teams started with a small
-            group of engineers and concrete test cases, <strong>including legacy code
-            modernization</strong>, then expanded as Devin proved out.
+            <strong>Nubank</strong> needed to split its core ETL — an 8-year-old
+            monolith of over 6 million lines of code — into smaller sub-modules.
+            Engineers delegated the repetitive migration work to Devin and
+            reviewed its output.
           </p>
-          <div class="proof-quote">
-            &ldquo;It's just such a force multiplier.&rdquo;
-            <span class="who">Nate Hicks, VP Product Management, GE Aerospace</span>
-          </div>
           <p>
-            Engineers direct and review the work. Devin does more of it. That's the
-            same trade this program needs — and the same bounded way to start.
+            Different industry, same shape of problem: a years-old system,
+            millions of lines nobody wants to touch, and a migration that can't
+            stop the business.
           </p>
-          <a class="proof-link" href="https://devin.ai/customers/geaerospace" target="_blank" rel="noopener">Read the published story &rarr;</a>
+          <a class="proof-link" href="https://devin.ai/customers/nubank" target="_blank" rel="noopener">Read the published story &rarr;</a>
         </div>
       </div>
     </section>
@@ -469,7 +459,7 @@
     <!-- ======= 6. STRAIGHT ANSWERS ======= -->
     <section id="answers">
       <h2>Straight answers</h2>
-      <p class="lede">The objections this pitch usually gets — answered directly.</p>
+      <p class="lede">The objections I'd expect — answered directly.</p>
 
       <div class="qa">
         <div class="q">&ldquo;Devin doesn't replace our integrator.&rdquo;</div>
@@ -496,7 +486,7 @@
           <strong>That's the case for it, not against it.</strong> Undocumented legacy code
           is exactly where automated code understanding pays back first — and it's where
           the risk of losing knowledge to retirement and attrition quietly sits.
-          (Legacy code modernization was one of GE Aerospace's first test cases.)
+          (Nubank's migration started from an 8-year-old, 6-million-line monolith.)
         </div>
       </div>
       <div class="qa">
@@ -513,9 +503,7 @@
       <h2>A bounded way to start</h2>
       <p class="lede">
         Not a platform decision. One integration, one engineer overseeing,
-        a few weeks, clear exit criteria. It's also how Devin actually gets
-        adopted — GE Aerospace's rollout began with a small group of engineers
-        and concrete test cases, then expanded.
+        a few weeks, clear exit criteria.
       </p>
       <div class="pilot-box">
         <h4>Pilot: document and test one integration</h4>
@@ -526,7 +514,7 @@
           </div>
           <div>
             <dt>Duration</dt>
-            <dd>Roughly four to six weeks, running alongside the program — never in its way.</dd>
+            <dd>Roughly four weeks, running alongside the program — never in its way.</dd>
           </div>
           <div>
             <dt>Success criteria</dt>
@@ -547,17 +535,16 @@
       <p>
         I've spent six years in enterprise logistics account management, and I've
         watched what a bad warehouse cutover does to an operation — missed shipments,
-        frozen inventory, customers calling. The software gets blamed. It's almost
-        never the software. <strong>It's the engineering work around it that nobody owned.</strong>
+        frozen inventory, customers calling. The software gets blamed. Usually,
+        it isn't the software. <strong>It's the engineering work around it that nobody owned.</strong>
       </p>
       <p>
-        I built this page because Devin is the first thing I've seen that actually
-        addresses that gap — and because this is how I'd run the conversation as an
-        SDR at Cognition: specific, bounded, and honest about what the product doesn't do.
+        I built this page because Devin is built for exactly that gap — and
+        because this is the conversation I'd want to have: specific, bounded,
+        and honest about what the product doesn't do.
       </p>
       <p>
-        If you're running a WMS migration with an ERP replacement behind it — or you're
-        at Cognition and want to see how I'd run this call — let's talk.
+        If you're running a WMS migration with an ERP replacement behind it, let's talk.
       </p>
       <div class="contact-links">
         <a class="btn primary" href="https://cal.com/carson-lockwood-9knz2p" target="_blank" rel="noopener">Book a conversation</a>
@@ -570,7 +557,7 @@
   <footer>
     <div class="container">
       <p>A sample sales pitch built by Carson Lockwood. Devin is a product of Cognition.</p>
-      <p>The buyer scenario is illustrative — no real companies, customers, or software products are named in it. The GE Aerospace example is Cognition's published customer story.</p>
+      <p>The buyer scenario is illustrative — no real companies, customers, or software products are named in it. The Nubank example is Cognition's published customer story.</p>
     </div>
   </footer>
 
